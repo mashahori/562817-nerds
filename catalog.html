@@ -16,15 +16,16 @@
           <li class='site-navigation-current'><a>Магазин</a></li>
           <li><a href='contacts.html'>Контакты</a></li>
         </ul>
-        <a class='cart'>Корзина</a>
+        <a class='cart' href='#'>Корзина</a>
       </nav>
       </header>
       <main class='container'>
         <h1>Магазин готовых шаблонов</h1>
         <section class='filters'>
           <h2 class='visually-hidden'>Параметры</h2>
-          <div class='filters-price'>
-            <h3>Стоимость</h3>
+          <form class='filter-form' method='get' action="https://echo.htmlacademy.ru">
+          <fieldset class='filters-price-form'>
+            <legend>Стоимость</legend>
              <div class="filter-range-wrapper">
                <div class="filter-range">
                  <div class="filter-range-scale">
@@ -38,36 +39,91 @@
               <label>От <input type="text" name="min-interval" value="0"></label>
               <label>До <input type="text" name="max-interval" value="15000"></label>
             </div>
-          </div>
-          <div class='grid-and-price'>
-            <fieldset>
+            </fieldset>
+            <fieldset class='grid-and-price-form'>
               <legend>Сетка</legend>
-              <!--Здесь будет форма-->
+              <ul>
+                <li class='filter-option'>
+                  <label>
+                    <input type='radio' name='grid' value='adaptive'>
+                    Адаптивная
+                  </label>
+                  </li>
+                <li class='filter-option'>
+                  <label>
+                    <input type='radio' name='grid' value='fixed'>
+                    Фиксированная
+                  </label>
+                </li>
+                <li class='filter-option'>
+                  <label>
+                    <input type='radio' name='grid' value='rubber'>
+                    Резиновая
+                  </label>
+                </li>
+              </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class='feaures-form'>
               <legend>Особенности</legend>
-              <!--Здесь будет форма-->
+              <ul>
+                <li class='filter-option'>
+                  <label>
+                    <input class='visually-hidden chechbox' type='checkbox'
+                    name='slider' checked>
+                    Слайдер
+                  </label>
+                </li>
+                <li class='filter-option'>
+                  <label>
+                    <input class='visually-hidden chechbox' type='checkbox'
+                    name='advantages'>
+                    Блок преимуществ
+                  </label>
+                </li>
+                <li class='filter-option'>
+                  <label>
+                    <input class='visually-hidden chechbox' type='checkbox'
+                    name='news' checked>
+                    Новости
+                  </label>
+                </li>
+                <li class='filter-option'>
+                  <label>
+                    <input class='visually-hidden chechbox' type='checkbox'
+                    name='gallery'>
+                    Галерея
+                  </label>
+                </li>
+                <li class='filter-option'>
+                  <label>
+                    <input class='visually-hidden chechbox' type='checkbox'
+                    name='slider'>
+                    Корзина
+                  </label>
+                </li>
+              </ul>
             </fieldset>
-          </div>
+            <button class='button' type='submit'>Показать</button>
+        </form>
         </section>
         <section class='catalog'>
           <h2 class='visually-hidden'>Каталог готовых шаблонов</h2>
             <p>Сортировать:</p>
             <ul>
-              <li><a class='sorting-button'>По цене</a></li>
-              <li><a class='sorting-button'>По типу</a></li>
-              <li><a class='sorting-button'>По названию</a></li>
+              <li><a class='sorting-button' href='#' >По цене</a></li>
+              <li><a class='sorting-button' href='#'>По типу</a></li>
+              <li><a class='sorting-button' href='#'>По названию</a></li>
             </ul>
             <ul>
-              <li><a class='sorting-button' type='button'>Вниз</a></li>
-              <li><a class='sorting-button' type='button'>Вверх</a></li>
+              <li><a class='sorting-button' href='#'>Вниз</a></li>
+              <li><a class='sorting-button' href='#'>Вверх</a></li>
             </ul>
             <ul class='catalog-list'>
               <li class='catalog-item'>
                 <img src='img/img-sedona.jpg' width='360' height='576'
                  alt='Шаблон сайта Sedona'>
                 <div class='sedona-hover'>
-                  <h2>Sedona</h2>
+                  <h2><a href='#'>Sedona</a></h2>
                   <p>Информационный сайт для туристов</p>
                   <a class='button' href='#'>9900</a>
                 </div>
@@ -76,7 +132,7 @@
                 <img src='img/img-pink.jpg' width='360' height='576'
                  alt='Шаблон сайта Pink'>
                     <div class='pink-hover'>
-                      <h2>Pink app</h2>
+                      <h2><a href='#'>Pink app</a></h2>
                       <p>Продуктовый лендинг<br>
                         приложения для iOS и Android</p>
                       <a class='button' href='#'>9900</a>
@@ -86,7 +142,7 @@
                 <img src='img/img-barbershop.jpg' width='360' height='576'
                  alt='Шаблон сайта Бородинский'>
                         <div class='barbershop-hover'>
-                          <h2>Barbershop</h2>
+                          <h2><a href='#'>Barbershop</a></h2>
                           <p>Сайт салоны красоты.<br>
                             Для мужчин, да.
                             </p>
@@ -97,7 +153,7 @@
                 <img src='img/img-mishka.jpg' width='360' height='576'
                             alt='Шаблон сайта Mishka'>
                             <div class='mishka-hover'>
-                              <h2>Mishka</h2>
+                              <h2><a href='#'>Mishka</a></h2>
                               <p>Интернет-магазин<br>
                                 вязаных игрушек
                                 </p>
@@ -108,7 +164,7 @@
                 <img src='img/img-aplus.jpg' width='360' height='576'
                                 alt='Шаблон сайта A Plus'>
                                 <div class='aplus-hover'>
-                                  <h2>A plus</h2>
+                                  <h2><a href='#'>A plus</a></h2>
                                   <p>Лендинг курсов повышения<br>
                                     квалификации
                                     </p>
@@ -119,7 +175,7 @@
                 <img src='img/img-kvast.jpg' width='360' height='576'
                       alt='Шаблон сайта Kvast'>
                       <div class='kvast-hover'>
-                        <h2>Кваст</h2>
+                        <h2><a href='#'>Кваст</a></h2>
                         <p>Промо-сайт производителя<br>
                           крафтового кваса
                           </p>
@@ -139,7 +195,8 @@
         <section class='footer-contacts-and-map'>
           <h2 class='visually-hidden'>Контакты и карта</h2>
           <img src='img/map.jpg' width='1440' height='416'
-           alt='Карта'>
+           alt='191186, Санкт-Петербург, <br>
+             ул. Б. Конюшенная, д. 19/8'>
            <p>191186, Санкт-Петербург, <br>
              ул. Б. Конюшенная, д. 19/8
            </p>
@@ -161,11 +218,30 @@
        </footer>
       <section class="modal write-us">
         <h2>Напишите нам</h2>
-        <span>Ваше имя:</span>
-        <span>Ваш e-mail:</span>
-        <span>Текст письма:</span>
-        <!--Здесь будет форма -->
-      <span class="modal-close">x</span>
+        <form class='write-us-form' action="https://echo.htmlacademy.ru"
+        method='post'>
+        <p>
+          <label>
+            Ваше имя:
+            <input type='text' name='name' value='' placeholder='Имя Фамилия'>
+          </label>
+        </p>
+        <p>
+          <label>
+            Ваш e-mail:
+            <input type='email' name='email' value='' placeholder='email@example.com'>
+          </label>
+        </p>
+        <p>
+          <label>
+            Текст письма:
+            <textarea name='comment' rows='10' cols='50' placeholder='В свободной
+             форме'></textarea>
+          </label>
+        </p>
+        <button class='button' type='submit'>Отправить</button>
+      </form>
+      <button class='modal-close' type='button'>Закрыть</button>
     </section>
   </body>
 </html>
