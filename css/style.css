@@ -1,0 +1,338 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283136;
+  background-color: #ffffff;
+}
+
+.container {
+  background-color: #eeeeee;
+}
+
+.services,
+.about-us-and-statistics,
+.partners,
+.filters,
+.catalog {
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-navigation {
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight:500;
+  background-color: #eeeeee;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.main-navigation a {
+  color: #000000;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+  color: #fb565a;
+}
+
+.main-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation .site-navigation-current {
+  border-bottom: 2px solid #fb565a;
+
+}
+
+.advantages {
+  background-color: #eeeeee;
+}
+
+.slider-title {
+  font-size: 55px;
+  line-height: 55px;
+  color: #000000;
+}
+
+.advantages a {
+  text-transform: uppercase;
+  color:#ffffff;
+  line-height: 18px;
+  text-align: center;
+  background-color: #fb565a;
+}
+
+.advantages a:hover,
+.advantages a:focus {
+  background-color: #e74246;
+}
+
+.advantages a:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d7373b;
+}
+
+.services h3 {
+  font-size:24px;
+  text-transform: uppercase;
+  color:#000000;
+  line-height: 30px;
+  font-weight:700;
+}
+
+.services-list {
+  list-style: none;
+}
+
+.button {
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  text-transform: uppercase;
+  color:#ffffff;
+  line-height: 18px;
+  text-align: center;
+  background-color: #fb565a;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #e74246;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #d7373b;
+}
+
+.service-item:nth-child(2) a {
+  background-color: #00ca74;
+}
+
+.service-item:last-child a {
+  background-color: #efc84a;
+}
+
+.service-item:nth-child(2) a:hover,
+.service-item:nth-child(2) a:focus {
+  background-color: #00bc6c;
+}
+
+.service-item:nth-child(2) a:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #00aa62;
+}
+
+.service-item:last-child a:hover,
+.service-item:last-child a:focus {
+  background-color: #eab534;
+}
+
+.service-item:last-child a:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #eab534;
+}
+
+.about-us b {
+  font-size:45px;
+  line-height:45px;
+  color:#000000;
+  font-weight:500;
+}
+
+.about-us h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.about-us .about-us-list {
+  list-style: none;
+}
+
+.statistics caption {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.statistics-numbers td {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight:700;
+  color:#000000;
+}
+
+.partners .partners-list {
+  list-style: none;
+}
+
+.contacts b {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.contacts p {
+  line-height:18px;
+  color:#666666;
+}
+
+.contacts .phone {
+  line-height:18px;
+  color:#666666;
+}
+
+.social .social-buttons {
+  list-style: none;
+}
+
+.friend-us b {
+  font-size:36px;
+  line-height:36px;
+  font-weight:700;
+}
+
+.write-us b {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.write-us-form label {
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.write-us-form input,
+.write-us-form textarea {
+  border: 2px solid #d7dcde;
+  background-color: transparent;
+}
+
+.write-us-form input:hover,
+.write-us-form textarea:hover {
+  border: 2px solid #b4b9bb;
+}
+
+.write-us-form input:focus,
+.write-us-form textarea:focus {
+  border: 2px solid #000000;
+}
+
+h1 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.filter-form legend {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 30px;
+  color: #000000;
+}
+
+.filter-interval label {
+  text-transform: uppercase;
+  line-height: 22px;
+}
+
+.filter-form ul {
+  list-style: none;
+}
+
+fieldset {
+  border: none;
+}
+
+.grid label,
+.features-form label {
+  line-height: 20px;
+}
+
+.filter-form .button {
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.filter-form .button:hover,
+.filter-form .button:focus {
+  background-color: #dfdfdf;
+}
+
+.filter-form .button:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #d5d5d5;
+}
+
+.catalog p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.catalog ul {
+  list-style: none;
+}
+
+.catalog .sorting-button {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.current {
+  color: #000000;
+}
+
+.pagination .button {
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+
+.pagination .button:hover,
+.pagination .button:focus {
+  background-color: #dfdfdf;
+}
+
+.pagination .button:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #d5d5d5;
+}
+
+.button .button-current {
+  color: #000000;
+  background-color: #000000;
+  border: 3px solid #dbdbdb;
+}
+
+.item-title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.catalog-item p {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #666666;
+  text-transform: none;
+}
