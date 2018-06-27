@@ -23,9 +23,11 @@
           <a class='cart' href='#'>Корзина</a>
        </nav>
       </header>
-      <main class='container'>
-        <h1 class='catalog-title'>Магазин готовых шаблонов</h1>
-        <div class='catalog-columns'>
+      <main>
+        <div class='catalog-title-background'>
+          <h1 class='catalog-title'>Магазин готовых шаблонов</h1>
+        </div>
+        <div class='catalog-columns container'>
         <section class='filters'>
           <h2 class='visually-hidden'>Параметры</h2>
           <form class='filter-form' method='get' action="https://echo.htmlacademy.ru">
@@ -42,53 +44,53 @@
                  <div class='price-controls'>
                    <label class='min-price'>от<input name='min-price'
                      type='text' value='0'></label>
-                   <label class='max-price'>до<input name='max-price' 
+                   <label class='max-price'>до<input name='max-price'
                      type='text' value='15000'></label>
                  </div>
                </div>
             </fieldset>
             <fieldset  class = 'filter-field'>
-              <legend>Сетка</legend>
+              <legend class='title-grid'>Сетка</legend>
               <ul class='grid'>
                 <li class='filter-option'>
-                  <input type='radio' name='grid' value='adaptive' id='adaptive' checked>
+                  <input class='visually-hidden filter-radio' type='radio' name='grid' value='adaptive' id='adaptive' checked>
                   <label for='adaptive'>Адаптивная</label>
                   </li>
                 <li class='filter-option'>
-                    <input type='radio' name='grid' value='fixed' id='fixed'>
+                    <input class='visually-hidden filter-radio' type='radio' name='grid' value='fixed' id='fixed'>
                     <label for='fixed'>Фиксированная</label>
                 </li>
                 <li class='filter-option'>
-                    <input type='radio' name='grid' value='rubber' id='rubber'>
+                    <input class='visually-hidden filter-radio'type='radio' name='grid' value='rubber' id='rubber'>
                     <label for='rubber'>Резиновая</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class = 'filter-field'>
-              <legend>Особенности</legend>
+              <legend class='title-features'>Особенности</legend>
               <ul class='features-form'>
                 <li class='filter-option'>
-                    <input class='visually-hidden chechbox' type='checkbox'
+                    <input class='visually-hidden filter-checkbox' type='checkbox'
                     name='slider' id='slider' checked>
                     <label for='slider'>Слайдер</label>
                 </li>
                 <li class='filter-option'>
-                  <input class='visually-hidden chechbox' type='checkbox'
+                  <input class='visually-hidden filter-checkbox' type='checkbox'
                     name='advantages' id='advantages'>
                     <label for='advantages'>Блок преимуществ</label>
                 </li>
                 <li class='filter-option'>
-                  <input class='visually-hidden chechbox' type='checkbox'
+                  <input class='visually-hidden filter-checkbox' type='checkbox'
                     name='news' id='news' checked>
                     <label for='news'>Новости</label>
                 </li>
                 <li class='filter-option'>
-                    <input class='visually-hidden chechbox' type='checkbox'
+                    <input class='visually-hidden filter-checkbox' type='checkbox'
                     name='gallery' id='gallery'>
                     <label for='gallery'>Галерея</label>
                 </li>
                 <li class='filter-option'>
-                    <input class='visually-hidden chechbox' type='checkbox'
+                    <input class='visually-hidden filter-checkbox' type='checkbox'
                     name='cart' id='cart'>
                     <label for='cart'>Корзина</label>
                 </li>
@@ -107,8 +109,10 @@
                 <li><a class='sorting-button' href='#'>По названию</a></li>
               </ul>
               <ul class='order-list'>
-                <li><a class='sorting-button' href='#'>Вниз</a></li>
-                <li><a class='sorting-button' href='#'>Вверх</a></li>
+                <li><span class='visually-hidden'>Вниз</span>
+                  <a class='sorting-button down-button' href='#'></a></li>
+                <li><span class='visually-hidden'>Вверх</span>
+                  <a class='sorting-button up-button' href='#'></a></li>
               </ul>
             </div>
             <ul class='catalog-list'>
@@ -177,10 +181,10 @@
                     </li>
           </ul>
           <ul class='pagination'>
-            <li><a  class='button button-current'>1</a></li>
-            <li><a class='button' href='#'>2</a></li>
-            <li><a class='button' href='#'>3</a></li>
-          <li><a class='button' href='#'>Следующая</a></li>
+            <li><a  class='button pagination-item button-current'>1</a></li>
+            <li><a class='button pagination-item' href='#'>2</a></li>
+            <li><a class='button pagination-item' href='#'>3</a></li>
+          <li><a class='button pagination-item next' href='#'>Следующая</a></li>
           </ul>
       </section>
     </div>
