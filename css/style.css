@@ -269,6 +269,15 @@ a {
 
 .services {
   margin-bottom: 80px;
+  position: relative;
+}
+
+.services::after {
+  content: '';
+  position: absolute;
+  border-bottom:2px solid #eeeeee;
+  width: 1160px;
+  bottom: -80px;
 }
 
 .services h3 {
@@ -438,8 +447,18 @@ a {
 }
 
 .about-us-list li {
+  position: relative;
   margin-bottom: 30px;
-  padding-left: 35px;
+  padding-left: 37px;
+}
+
+.about-us-list li::before {
+  content: '';
+  position: absolute;
+  border-bottom: 2px solid #fb565a;
+  width: 25px;
+  top: 10px;
+  left: 0;
 }
 
 .statistics {
@@ -482,6 +501,24 @@ a {
   flex-direction: row;
 }
 
+.partners {
+  position: relative;
+}
+
+.partners::before {
+  content: '';
+  position: absolute;
+  border-bottom:2px solid #eeeeee;
+  width: 1160px;
+}
+
+.partners::after {
+  content: '';
+  position: absolute;
+  border-bottom: 2px solid #eeeeee;
+  width: 1160px;
+}
+
 .partners-list {
   width: 1140px;
   margin: 0;
@@ -494,6 +531,16 @@ a {
 
 .partners-list a {
   display: block;
+  opacity: 0.2;
+}
+
+.partners-list a:hover,
+.partners-list a:focus {
+  opacity: 1;
+}
+
+.partners-list a:active {
+  opacity: 0.1;
 }
 
 .partner-logo {
