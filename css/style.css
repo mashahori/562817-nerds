@@ -59,12 +59,12 @@ a {
   display: block;
 }
 
-.main-header-logo:hover,
-.main-header-logo:focus {
+.main-header-logo[href]:hover,
+.main-header-logo[href]:focus {
   opacity: 0.8;
 }
 
-.main-header-logo:active {
+.main-header-logo[href]:active {
   opacity: 0.3;
 }
 
@@ -115,18 +115,17 @@ a {
   padding-right: 20px;
 }
 
-.main-navigation a:hover,
-.main-navigation a:focus {
+.main-navigation a[href]:hover,
+.main-navigation a[href]:focus {
   color: #fb565a;
 }
 
-.main-navigation a:active {
+.main-navigation a[href]:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
 .site-navigation .site-navigation-current {
   position: relative;
-      background-color: rgba(255, 0, 0, 0.1); /*временно для удобства*/
 }
 
 .site-navigation-current::before {
@@ -646,9 +645,12 @@ a {
   background-color: #e74246;
 }
 
+.social-button:active path {
+  opacity: 0.3;
+}
+
 .social-button:active {
   background-color: #d7373b;
-  opacity: 0.3;
 }
 
 .friend-us {
@@ -675,25 +677,101 @@ a {
 }
 
 .write-us {
-  width: 960px;
-    background-color: rgba(255, 0, 0, 0.1); /*временно для удобства*/
+  position: fixed;
+  bottom: 180px;
+  left: 50%;
+  margin-left: -480px;
+  width: 760px;
+  padding: 73px 100px 84px;
+  background-color: #ffffff;
+  z-index: 100;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+  display: none;
 }
 
+.modal-close {
+  position: absolute;
+  top: 90px;
+  right: 90px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: #ffffff;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  right: -2px;
+  top: 9px;
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 3px;
+  background-color: #fecccd;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+
 .write-us b {
+  display: block;
+  margin: 0;
+  margin-bottom: 40px;
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
 }
 
+.write-us-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.write-us-form p {
+  width: 360px;
+  margin: 0;
+}
+
+.write-us-form p:last-of-type {
+  width: 760px;
+}
+
 .write-us-form label {
+  display: block;
   line-height: 18px;
   font-weight: 700;
+  margin: 0;
+  margin-bottom: 10px;
 }
+
+.write-us-form input {
+  width: 360px;
+  margin-bottom: 30px;
+}
+
+.write-us-form textarea {
+  width: 760px;
+  margin-bottom: 36px
+}
+
 
 .write-us-form input,
 .write-us-form textarea {
+  box-sizing: border-box;
   border: 2px solid #d7dcde;
   background-color: transparent;
+  padding-top: 16px;
+  padding-left: 14px;
+  padding-bottom: 18px;
 }
 
 .write-us-form input:hover,
@@ -705,6 +783,14 @@ a {
 .write-us-form textarea:focus {
   border: 2px solid #000000;
 }
+
+.write-us-form .button {
+  width: 260px;
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
 
 .catalog-title {
   font-size: 55px;
@@ -857,9 +943,14 @@ a {
   line-height: 20px;
 }
 
-.filter-option label:hover,
-.filter-option label:focus {
+.filter-option label:hover {
   color: #000000;
+}
+
+.filter-checkbox:focus + label::before,
+.filter-radio:focus + label::before {
+  outline: 1px dashed #000000;
+  outline-offset: 2px;
 }
 
 .filter-option label:active {
@@ -888,13 +979,11 @@ a {
   opacity: 0.3;
 }
 
-.filter-checkbox + label:hover::before,
-.filter-checkbox + label:focus::before {
+.filter-checkbox + label:hover::before {
   opacity: 1;
 }
 
-.filter-checkbox:checked + label:hover::after,
-.filter-checkbox:checked + label:focus::after {
+.filter-checkbox:checked + label:hover::after {
   opacity: 1;
 }
 
@@ -927,13 +1016,11 @@ a {
   border-radius: 50%;
 }
 
-.filter-radio + label:hover::before,
-.filter-radio + label:focus::before {
+.filter-radio + label:hover::before {
   border: 5px solid #4d4d4d;
 }
 
-.filter-radio:checked + label:hover::after,
-.filter-radio:checked + label:focus::after {
+.filter-radio:checked + label:hover::after {
   background-color: #4d4d4d;
 }
 
@@ -975,7 +1062,6 @@ a {
   color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
   box-shadow: 0 3px 0 0 #bfbfbf inset;
-  outline: none;
 }
 
 .catalog p {
@@ -1026,45 +1112,45 @@ a {
   justify-content: space-between;
 }
 
-.order-list a {
-  display: block;
+.order-list li {
   width: 10px;
   height: 10px;
-  position: relative;
 }
 
-.order-list .down-button::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
+.order-list .down-button {
+  font-size: 0;
+  display: block;
+  vertical-align: middle;
   border: 5px solid transparent;
   border-top: 10px solid #000000;
-  top: 5px;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
-.order-list .up-button::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
+.order-list .up-button {
+  font-size: 0;
+  display: block;
+  vertical-align: middle;
   border: 5px solid transparent;
   border-bottom: 10px solid #000000;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .catalog .sorting-current {
   color: rgba(0, 0, 0, 1);
 }
 
-.catalog .order-current {
+.order-list .order-current {
   opacity: 1;
 }
 
-.sorting-button:hover,
+.sorting-list a[href]:hover,
 .sorting-button:focus {
     color: rgba(0, 0, 0, 0.6);
+}
+
+.order-list a:hover,
+.order-list a:focus {
+  opacity: 0.6;
 }
 
 .sorting-button:active {
@@ -1085,14 +1171,15 @@ a {
   margin-bottom: 35px;
   margin-right: 40px;
   border-top: 40px solid rgba(77, 77, 77, 0.12);
-  border-radius: 5px;
-  z-index: 30;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 0;
 }
 
 .catalog-item:hover,
 .catalog-item:focus {
   border-top: 40px solid rgba(77, 77, 77, 1);
-  box-shadow: 0px 6px 15px 0px rgba(0, 1, 1, 0.25);
+  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.25);
 }
 
 .catalog-item::before {
@@ -1121,7 +1208,7 @@ a {
   margin-bottom: 60px;
 }
 
-.catalog-item div {
+.catalog-hover {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1132,6 +1219,12 @@ a {
   padding: 30px 60px 43px;
   box-sizing: border-box;
   text-align: center;
+  opacity: 0;
+}
+
+.catalog-hover:hover,
+.catalog-hover:focus {
+  opacity: 1;
 }
 
 .item-title {
@@ -1206,18 +1299,18 @@ a {
 }
 
 
-.pagination .button:hover,
-.pagination .button:focus {
+.pagination .button[href]:hover,
+.pagination .button[href]:focus {
   background-color: #dfdfdf;
 }
 
-.pagination .button:active {
+.pagination .button[href]:active {
   color: rgba(0, 0, 0, 0.3);
   background-color: #d5d5d5;
   box-shadow: 0 3px 0 0 #bfbfbf inset;
 }
 
-.button-current {
+.pagination .button-current {
   background-color: #ffffff;
   border: 3px solid #dbdbdb;
   padding: 15px 16px;

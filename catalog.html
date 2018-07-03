@@ -104,13 +104,13 @@
             <div class='sorting-wrapper'>
               <p>Сортировать:</p>
               <ul class='sorting-list'>
-                <li><a class='sorting-button sorting-current' href='#' >По цене</a></li>
+                <li><a class='sorting-button sorting-current'>По цене</a></li>
                 <li><a class='sorting-button' href='#'>По типу</a></li>
                 <li><a class='sorting-button' href='#'>По названию</a></li>
               </ul>
               <ul class='order-list'>
                 <li><span class='visually-hidden'>Вниз</span>
-                  <a class='sorting-button down-button order-current' href='#'></a></li>
+                  <a class='sorting-button down-button order-current'></a></li>
                 <li><span class='visually-hidden'>Вверх</span>
                   <a class='sorting-button up-button' href='#'></a></li>
               </ul>
@@ -119,7 +119,7 @@
               <li class='catalog-item'>
                 <img src='img/img-sedona.jpg' width='360' height='576'
                  alt='Шаблон сайта Sedona'>
-                <div class='sedona-hover'>
+                <div class='catalog-hover'>
                   <h2><a class='item-title' href='#'>Sedona</a></h2>
                   <p>Информационный сайт<br> для туристов</p>
                   <a class='button' href='#'>9900 руб.</a>
@@ -128,7 +128,7 @@
               <li class='catalog-item'>
                 <img src='img/img-pink.jpg' width='360' height='576'
                  alt='Шаблон сайта Pink'>
-                    <div class='pink-hover'>
+                    <div class='catalog-hover'>
                       <h2><a class='item-title' href='#'>Pink app</a></h2>
                       <p>Продуктовый лендинг<br>
                         приложения для iOS и Android</p>
@@ -138,7 +138,7 @@
               <li class='catalog-item'>
                 <img src='img/img-barbershop.jpg' width='360' height='576'
                  alt='Шаблон сайта Бородинский'>
-                        <div class='barbershop-hover'>
+                        <div class='catalog-hover'>
                           <h2><a class='item-title' href='#'>Barbershop</a></h2>
                           <p>Сайт салоны красоты.<br>
                             Для мужчин, да.
@@ -149,7 +149,7 @@
               <li class='catalog-item'>
                 <img src='img/img-mishka.jpg' width='360' height='576'
                             alt='Шаблон сайта Mishka'>
-                            <div class='mishka-hover'>
+                            <div class='catalog-hover'>
                               <h2><a class='item-title' href='#'>Mishka</a></h2>
                               <p>Интернет-магазин<br>
                                 вязаных игрушек
@@ -160,7 +160,7 @@
               <li class='catalog-item'>
                 <img src='img/img-aplus.jpg' width='360' height='576'
                                 alt='Шаблон сайта A Plus'>
-                                <div class='aplus-hover'>
+                                <div class='catalog-hover'>
                                   <h2><a class='item-title' href='#'>A plus</a></h2>
                                   <p>Лендинг курсов повышения<br>
                                     квалификации
@@ -171,7 +171,7 @@
               <li class='catalog-item'>
                 <img src='img/img-kvast.jpg' width='360' height='576'
                       alt='Шаблон сайта Kvast'>
-                      <div class='kvast-hover'>
+                      <div class='catalog-hover'>
                         <h2><a class='item-title' href='#'>Кваст</a></h2>
                         <p>Промо-сайт производителя<br>
                           крафтового кваса
@@ -252,32 +252,26 @@
            </div>
          </section>
        </footer>
-      <section class="write-us container">
-        <b>Напишите нам</b>
-        <form class='write-us-form' action="https://echo.htmlacademy.ru"
-        method='post'>
-        <p>
-          <label>
-            Ваше имя:
-            <input type='text' name='name' value='' placeholder='Имя Фамилия'>
-          </label>
-        </p>
-        <p>
-          <label>
-            Ваш e-mail:
-            <input type='email' name='email' value='' placeholder='email@example.com'>
-          </label>
-        </p>
-        <p>
-          <label>
-            Текст письма:
-            <textarea name='comment' rows='10' cols='50' placeholder='В свободной
-             форме'></textarea>
-          </label>
-        </p>
-        <button class='button' type='submit'>Отправить</button>
-      </form>
-      <button class='modal-close' type='button'>Закрыть</button>
-    </section>
+       <section class="modal write-us container">
+         <b>Напишите нам</b>
+         <form class='write-us-form' action="https://echo.htmlacademy.ru"
+         method='post'>
+         <p>
+           <label for='name'>Ваше имя:</label>
+             <input type='text' name='name' value='' placeholder='Имя Фамилия' id='name'>
+         </p>
+         <p>
+           <label for='email'>Ваш e-mail:</label>
+             <input type='email' name='email' value='' placeholder='email@example.com' id='email'>
+         </p>
+         <p>
+           <label for='comment'>Текст письма:</label>
+             <textarea name='comment' rows='5' cols='50' placeholder='В свободной
+              форме' id='comment' ></textarea>
+         </p>
+         <button class='button' type='submit'>Отправить</button>
+       </form>
+       <button class='modal-close' type='button'>Закрыть</button>
+     </section>
   </body>
 </html>
