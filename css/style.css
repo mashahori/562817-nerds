@@ -948,13 +948,14 @@ a {
 }
 
 .filter-checkbox:focus + label::before,
-.filter-radio:focus + label::before {
+.filter-radio:focus + label::before,
+.filter-radio:checked:focus + label::after {
   outline: 1px dashed #000000;
   outline-offset: 2px;
 }
 
 .filter-option label:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.1);
 }
 
 .filter-checkbox + label::before {
@@ -968,7 +969,7 @@ a {
   opacity: 0.3;
 }
 
-.filter-checkbox:checked + label::after {
+.filter-checkbox:checked + label::before {
   content: '';
   position: absolute;
   background: url('../img/checkbox-on.svg');
@@ -983,13 +984,9 @@ a {
   opacity: 1;
 }
 
-.filter-checkbox:checked + label:hover::after {
-  opacity: 1;
-}
-
 .filter-checkbox + label:active::before,
-.filter-checkbox:checked + label:active::after {
-  opacity:0.3;
+.filter-checkbox:checked + label:active::before {
+  opacity: 0.1;
 }
 
 
@@ -1112,11 +1109,6 @@ a {
   justify-content: space-between;
 }
 
-.order-list li {
-  width: 10px;
-  height: 10px;
-}
-
 .order-list .down-button {
   font-size: 0;
   display: block;
@@ -1144,17 +1136,19 @@ a {
 }
 
 .sorting-list a[href]:hover,
-.sorting-button:focus {
+.sorting-list a[href]:focus {
     color: rgba(0, 0, 0, 0.6);
 }
 
-.order-list a:hover,
-.order-list a:focus {
+.order-list a[href]:hover,
+.order-list a[href]:focus {
   opacity: 0.6;
 }
 
-.sorting-button:active {
-  color: rgba(0, 0, 0, 1);
+.sorting-list a[href]:active,
+.order-list a[href]:active {
+  color: #000000;
+  opacity: 1;
 }
 
 
@@ -1198,6 +1192,11 @@ a {
   margin-right: 0;
 }
 
+.catalog-item img {
+  display: block;
+  width: 360px;
+  height: 576px;
+}
 
 
 .catalog-list {
@@ -1267,7 +1266,7 @@ a {
 }
 
 .pagination li {
-  margin-right: 11px;
+  margin-right: 12px;
 }
 
 .pagination li:last-child {
@@ -1279,10 +1278,8 @@ a {
   line-height: 18px;
   font-weight: 500;
   color: #000000;
-  height: 14px;
-  width: 10px;
   display: block;
-  padding: 18px 22px;
+  padding: 16px 20px;
   border-radius: 2px;
 }
 
@@ -1312,6 +1309,7 @@ a {
 
 .pagination .button-current {
   background-color: #ffffff;
-  border: 3px solid #dbdbdb;
+  box-shadow: inset 3px 3px 0 #dbdbdb,
+  inset -3px -3px 0 #dbdbdb;
   padding: 15px 16px;
 }
