@@ -617,6 +617,12 @@ a {
   height: 416px;
 }
 
+.map-interactive iframe {
+  border: none;
+  position: relative;
+  z-index: 30;
+}
+
 .map-image {
   position: absolute;
   z-index: 10;
@@ -735,6 +741,43 @@ a {
   line-height: 22px;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateX(-2000px);
+  }
+  70% {
+    transform: translateX(30px);
+  }
+  90% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .write-us {
   position: fixed;
   bottom: 50%;
@@ -747,6 +790,15 @@ a {
   z-index: 100;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
   display: none;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-close {
@@ -1319,6 +1371,8 @@ a {
   text-align: center;
   display: block;
   margin: 16px 0;
+  overflow: hidden;
+  max-height: 413px;
 }
 
 .catalog-item:nth-child(1) p {
