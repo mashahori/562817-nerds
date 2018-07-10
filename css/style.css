@@ -95,7 +95,7 @@ a {
 }
 
 .cart::before {
-  content:'';
+  content: '';
   width: 15px;
   height: 15px;
   position: absolute;
@@ -207,7 +207,7 @@ a {
 }
 
 .slider-controls label::after {
-  content:'';
+  content: '';
   width: 18px;
   height: 18px;
   background-color: #ffffff;
@@ -233,7 +233,7 @@ a {
 #btn-1:checked ~ .slider-controls .slider-controls-item--1::before,
 #btn-2:checked ~ .slider-controls .slider-controls-item--2::before,
 #btn-3:checked ~ .slider-controls .slider-controls-item--3::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   top: 50%;
@@ -248,7 +248,7 @@ a {
 
 .advantages a {
   text-transform: uppercase;
-  color:#ffffff;
+  color: #ffffff;
   line-height: 18px;
   text-align: center;
   background-color: #fb565a;
@@ -277,7 +277,7 @@ a {
 .services::after {
   content: '';
   position: absolute;
-  border-bottom:2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
   width: 1160px;
   bottom: -80px;
 }
@@ -286,16 +286,16 @@ a {
   position: relative;
   margin: 0;
   padding: 0;
-  font-size:24px;
+  font-size: 24px;
   text-transform: uppercase;
-  color:#000000;
+  color: #000000;
   line-height: 30px;
-  font-weight:700;
+  font-weight: 700;
   margin-bottom: 15px;
 }
 
 .service-web::before {
-  content:'';
+  content: '';
   position: absolute;
   width: 300px;
   height: 146px;
@@ -305,7 +305,7 @@ a {
 }
 
 .service-app::before {
-  content:'';
+  content: '';
   position: absolute;
   width: 300px;
   height: 146px;
@@ -315,7 +315,7 @@ a {
 }
 
 .service-presentation::before {
-  content:'';
+  content: '';
   position: absolute;
   width: 300px;
   height: 146px;
@@ -414,7 +414,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .about-us {
@@ -423,24 +423,24 @@ a {
 }
 
 .about-us b {
-  font-size:45px;
-  line-height:45px;
+  font-size: 45px;
+  line-height: 45px;
   color: #000000;
-  font-weight:500;
+  font-weight: 500;
   margin: 0;
 }
 
 .about-us p {
   margin: 0;
   margin-top: 35px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .about-us h4 {
   text-transform: uppercase;
   font-weight: 700;
-  color:#000000;
-  margin-bottom: 22px;
+  color: #000000;
+  margin-bottom: 27px;
 }
 
 .about-us-list {
@@ -544,6 +544,7 @@ a {
 .partners::after {
   content: '';
   position: absolute;
+  bottom: -4px;
   border-bottom: 2px solid #eeeeee;
   width: 1160px;
 }
@@ -603,10 +604,10 @@ a {
 }
 
 .main-footer {
-  margin-top: 80px;
+  margin-top: 85px;
 }
 
-.inner-page .main-footer {
+.inner-footer {
   margin-top: 60px;
 }
 
@@ -638,7 +639,7 @@ a {
 .contacts {
   width: 220px;
   margin: 0;
-  padding: 46px 48px 47px 51px;
+  padding: 48px 48px 47px 51px;
   position: relative;
   z-index: 30;
   background-color: #ffffff;
@@ -655,13 +656,13 @@ a {
 .contacts p {
   margin-top: 25px;
   margin-right: 10px;
-  line-height:18px;
-  color:#666666;
+  line-height: 18px;
+  color: #666666;
 }
 
 .contacts .phone {
-  line-height:18px;
-  color:#666666;
+  line-height: 18px;
+  color: #666666;
 }
 
 .contacts .button {
@@ -721,9 +722,9 @@ a {
 .friend-us b {
   margin: 0;
   padding: 0;
-  font-size:36px;
-  line-height:36px;
-  font-weight:700;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
   color: #000000;
 }
 
@@ -1143,8 +1144,7 @@ a {
   font-weight: 700;
   line-height: 18px;
   text-transform: uppercase;
-  width: 160px;
-  margin-right: 197px;
+  margin-right: 220px;
 }
 
 .catalog ul {
@@ -1235,7 +1235,7 @@ a {
 .catalog-item {
   position: relative;
   width: 360px;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
   margin-right: 40px;
   border-top: 40px solid rgba(77, 77, 77, 0.12);
   border-top-left-radius: 5px;
@@ -1274,7 +1274,7 @@ a {
 .catalog .catalog-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 }
 
 .catalog-hover {
@@ -1285,7 +1285,7 @@ a {
   background-color: #eeeeee;
   width: 360px;
   min-height: 230px;
-  padding: 5px 60px 45px;
+  padding: 12px 60px;
   box-sizing: border-box;
   text-align: center;
   opacity: 0;
@@ -1296,13 +1296,18 @@ a {
   opacity: 1;
 }
 
+.catalog-item h3 {
+  margin-top: 15px;
+  margin-bottom: 16px;
+}
+
 .catalog-item .item-title {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
-  margin-bottom: 21px;
+  display: block;
 }
 
 .catalog-item p {
@@ -1311,16 +1316,21 @@ a {
   font-weight: 400;
   color: #666666;
   text-transform: none;
-  min-width: 240px;
-  margin-bottom: 28px;
   text-align: center;
+  display: block;
+  margin: 16px 0;
+}
+
+.catalog-item:nth-child(1) p {
+  padding: 0 20px;
 }
 
 .catalog-item .button {
-  padding: 16px 0;
-  width: 200px;
-  margin: 0 20px;
-  margin-bottom: 43px;
+  padding: 16px 60px;
+  margin-top: 12px;
+  width: 80px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .catalog-item .button:active {
@@ -1353,7 +1363,7 @@ a {
   width: 18px;
 }
 
-.pagination .next{
+.pagination .next {
   width: 106px;
   display: block;
   padding: 17px 76px 15px;
