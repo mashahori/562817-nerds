@@ -621,6 +621,7 @@ a {
   border: none;
   position: relative;
   z-index: 30;
+  width: 100%;
 }
 
 .map-image {
