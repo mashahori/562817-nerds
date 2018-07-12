@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic"
      rel="stylesheet">
     <link href='css/normalize.css' rel='stylesheet'>
-    <link href='css/style.css' rel='stylesheet'>
+    <link href='css/style.min.css' rel='stylesheet'>
   </head>
   <body>
     <header class='main-header'>
@@ -26,13 +26,13 @@
       <h1 class='visually-hidden'>Дизайн студия Нердс</h1>
       <section class='advantages'>
         <h2 class='visually-hidden'>Наши преимущества</h2>
-        <input class='visually-hidden' type="radio" id="btn-1" name="toggle" checked>
-        <input class='visually-hidden' type="radio" id="btn-2" name="toggle">
-        <input class='visually-hidden' type="radio" id="btn-3" name="toggle">
+        <input class='visually-hidden btn-1' type='radio' id='btn-1' name='toggle' checked>
+        <input class='visually-hidden btn-2' type='radio' id='btn-2' name='toggle'>
+        <input class='visually-hidden btn-3' type='radio' id='btn-3' name='toggle'>
         <div class='slider-controls'>
-          <label class="slider-controls-item slider-controls-item--1" for="btn-1">Первый</label>
-          <label class="slider-controls-item slider-controls-item--2" for="btn-2">Второй</label>
-          <label  class="slider-controls-item slider-controls-item--3" for="btn-3">Третий</label>
+          <label class='slider-controls-item slider-controls-item--1' for='btn-1'>Первый</label>
+          <label class='slider-controls-item slider-controls-item--2' for='btn-2'>Второй</label>
+          <label  class='slider-controls-item slider-controls-item--3' for='btn-3'>Третий</label>
         </div>
         <ul class='slider-list container'>
           <li class='slider-item'>
@@ -192,7 +192,7 @@
             <a href ='#'>
               <span class='visually-hidden'>Инстаграм</span>
               <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21"
-              width="21" xmlns="http://www.w3.org/2000/svg">
+               width="21" xmlns="http://www.w3.org/2000/svg">
                 <path d="m18 0h-15c-1.65 0-3 1.35-3 3v15c0 1.65 1.35 3
                 3 3h15c1.65 0 3-1.35 3-3v-15c0-1.65-1.35-3-3-3zm-7.5 7c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5
                 3.5-3.5-1.57-3.5-3.5 1.57-3.5 3.5-3.5zm7.5 11h-15v-9h1.181c-.114.482-.181.983-.181 1.5 0
@@ -229,6 +229,6 @@
       </form>
       <button class='modal-close' type='button'>Закрыть</button>
     </section>
-    <script src='js/popupjs.js'></script>
+    <script src='js/popupjs.min.js'></script>
   </body>
 </html>
